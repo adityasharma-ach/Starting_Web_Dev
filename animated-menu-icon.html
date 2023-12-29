@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANIMATED MENU ICON</title>
+  <style>
+    .menu-icon{
+      display: inline-block;
+      cursor: pointer;
+    }
+    .line1,.line2, .line3{
+      width: 150px;
+      height: 20px;
+      background-color: tomato;
+      margin: 20px;
+      transition: 0.5s;
+    }
+    .change .line1{
+      transform: translate(0, 25px) rotate(-45deg);
+    }
+    .change .line2{
+      opacity: 0;
+    }
+    .change .line3{
+      transform: translate(0, -25px) rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+<div class="menu-icon" onclick="myMenuIcon(this)">
+  <div class="line1 line"></div>
+  <div class="line2 line"></div>
+  <div class="line3 line"></div>
+</div>
+<script>
+  function myMenuIcon(x){
+    x.classList.toggle("change");
+  }
+</script>
+</body>
+</html>
