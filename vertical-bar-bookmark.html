@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VERTICAL-BAR- BOOKMARK/FAQ</title>
+  <style>
+    .question-menu{
+      width: 30%;
+      float: left;
+      background-color: lightgray;
+      border: 1px solid gray;
+      height: 200px;
+    }
+    button{
+      background-color: inherit;
+      border: none;
+      display: block;
+      text-align: center;
+      width: 100%;
+      font-size: large;
+      font-weight: bold;
+      padding: 22px;
+      cursor: pointer;
+    }
+    button:hover{
+      background-color: gray;
+    }
+    .answer{
+      float: left;
+      width: 68%;
+      border: 1px solid gray;
+      border-left: none;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="question-menu">
+    <button onclick="verBarFaq('question1')" id="open">Question 1</button>
+    <button onclick="verBarFaq('question2')">Question 2</button>
+    <button onclick="verBarFaq('question3')">Question 3</button>
+  </div>
+  <div class="answer" id="question1">
+    <h3>Question 1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, quae?</p>
+  </div>
+  <div class="answer" id="question2">
+    <h3>Question 2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, quae?</p>
+  </div>
+  <div class="answer" id="question3">
+    <h3>Question 3</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, quae?</p>
+  </div>
+  <script>
+    function verBarFaq(quesName){
+      var i, answer;
+      answer=document.getElementsByClassName("answer");
+      for(i=0; i<answer.length; i++){
+        answer[i].style.display="none";
+      }
+      document.getElementById(quesName).style.display="block";
+    }
+    document.getElementById(open).click();
+    
+  </script>
+</body>
+</html>
