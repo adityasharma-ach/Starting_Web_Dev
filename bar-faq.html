@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HORIZONTAL BAR FAQ/BOOKMARK</title>
+<style>
+  body{
+    font-family: arial;
+  }
+  .question-menu{
+background-color: lightgray;
+border: 1px solid gray;
+overflow: hidden;
+  }
+  button{
+    background-color: lightgray;
+    border: none;
+    font-weight: bold;
+    font-size: large;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover{
+    background-color: gray;
+  }
+  .answer{
+    border: 1px solid gray;
+    padding: 10px;
+    font-size: 20px;
+    display: none;
+  }
+</style>
+ </head>
+<body>
+  <div class="question-menu">
+    <button onclick="barFaq('question1')">Question 1</button>
+    <button onclick="barFaq('question2')">Question 2</button>
+    <button onclick="barFaq('question3')">Question 3</button>
+    <button onclick="barFaq('question4')">Question 4</button>
+  </div>
+  <div id="question1" class="answer">
+    <h3>Question 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+  </div>
+  <div id="question2" class="answer">
+    <h3>Question 2</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+  </div>
+  <div id="question3" class="answer">
+    <h3>Question 3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+  </div>
+  <div id="question4" class="answer">
+    <h3>Question 4</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+  </div>
+  <script>
+    function barFaq(quesName){
+      var i, answer;
+      answer=document.getElementsByClassName("answer");
+      for(i=0; i<answer.length; i++){
+        answer[i].style.display="none";
+      }
+      document.getElementById(quesName).style.display="block";
+      tab
+    }
+  </script>
+</body>
+</html>
